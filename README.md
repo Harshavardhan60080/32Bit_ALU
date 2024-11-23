@@ -8,7 +8,7 @@
   To Verify the Functionality using Test Bench.
 
 
-Tool Required:
+## Tool Required:
 
   Functional Simulation: Incisive Simulator (ncvlog, ncelab, ncsim)
 
@@ -23,15 +23,15 @@ Design Information and Bock Diagram:
 
 
 
-Fig 1 : Block Diagram of 32 Bit ALU
+## Fig 1 : Block Diagram of 32 Bit ALU
 
 
-Creating a Work space:
+## Creating a Work space:
 
   Create a folder in your name (Note: Give folder name without any space) and Create a new sub-Directory name it as Exp3 or alu_32bit for the Design and open a terminal from the Sub-Directory.
 
 
-Creating Source Codes:
+## Creating Source Codes:
 
   In the Terminal, type gedit .v (ex: gedit alu_32bit.v).
 
@@ -43,7 +43,7 @@ Creating Source Codes:
 a)To Verify the Functionality using Test Bench
 
 
-Source Code – Using Case Statement:
+## Source Code – Using Case Statement:
 
 
 module alu_32bit_case(y,a,b,f);
@@ -68,12 +68,12 @@ endmodule
 
   Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
 
-Creating Test bench:
+## Creating Test bench:
 
   Similarly, create your test bench using gedit <filename_tb>.v or <filename_tb>.vhdl to open a new blank document (alu_32bit_tb_case).
 
 
-Test Bench:
+## Test Bench:
 
 
 module alu_32bit_tb_case;
@@ -99,7 +99,7 @@ endmodule
 
   Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
 
-Functional Simulation:
+## Functional Simulation:
 
   Invoke the cadence environment by type the below commands
 
@@ -118,7 +118,7 @@ Functional Simulation:
 
 
 
-Fig 2: Invoke the Cadence Environment
+## Fig 2: Invoke the Cadence Environment
 
 
   To Launch Simulation tool
@@ -139,7 +139,7 @@ Fig 2: Invoke the Cadence Environment
 ![{47DB3E47-E0EE-40E4-A170-8CD4B23A1199}](https://github.com/user-attachments/assets/a016f358-4518-4c64-b1a3-6c37b7f9c2dd)
 
 
-Fig 3: Setting Multi-step simulation
+## Fig 3: Setting Multi-step simulation
 
 
   Select Multiple Step and then select “Create cds.lib File” as shown in below figure
@@ -153,7 +153,7 @@ Fig 3: Setting Multi-step simulation
 
 
 
-Fig 4:cds.lib file Creation
+## Fig 4:cds.lib file Creation
 
 
   Save cds.lib file and select the correct option for cds.lib file format based on the HDL Language and Libraries used.
@@ -170,7 +170,7 @@ Fig 4:cds.lib file Creation
 
 
 
-Fig 5: Selection of Don’t include any libraries
+## Fig 5: Selection of Don’t include any libraries
 
 
   A ‘NCLaunch window’ appears as shown in figure below
@@ -187,10 +187,10 @@ Fig 5: Selection of Don’t include any libraries
 
 
 
-Fig 6: Nclaunch Window
+## Fig 6: Nclaunch Window
 
 
-Step 1: Compilation:
+## Step 1: Compilation:
 
   Process to check the correct Verilog language syntax and usage
 
@@ -199,7 +199,7 @@ Step 1: Compilation:
   Outputs: Compiled database created in mapped library if successful, generates report else error reported in log file
 
 
-Steps for compilation:
+## Steps for compilation:
 
   1. Create work/library directory (most of the latest simulation tools creates automatically)
 
@@ -219,7 +219,7 @@ Steps for compilation:
 
 
 
-Fig 7: Compiled database in worklib
+## Fig 7: Compiled database in worklib
 
 
   After compilation it will come under worklib you can see in right side window
@@ -228,7 +228,7 @@ Fig 7: Compiled database in worklib
 
   The cds.lib file is an ASCII text file. It defines which libraries are accessible and where they are located. It contains statements that map logical library names to their physical directory paths. For this Design, you will define a library called “worklib”
 
-Step 2: Elaboration:
+## Step 2: Elaboration:
 
   To check the port connections in hierarchical design
 
@@ -236,7 +236,7 @@ Step 2: Elaboration:
 
   Outputs: Elaborate database updated in mapped library if successful, generates report else error reported in log file
 
-Steps for elaboration:
+## Steps for elaboration:
 
   Run the elaboration command with elaborate options
 
@@ -261,10 +261,10 @@ Steps for elaboration:
 
 
 
-Fig 8: Elaboration Launch Option
+## Fig 8: Elaboration Launch Option
 
 
-Step 3: Simulation:
+## Step 3: Simulation:
 
   Simulate with the given test vectors over a period of time to observe the output behaviour.
 
@@ -281,7 +281,7 @@ Step 3: Simulation:
 
 
 
-Fig 9: Design Browser window for simulation
+## Fig 9: Design Browser window for simulation
 
 
 ![image](https://github.com/user-attachments/assets/a187f66c-6e51-449d-821e-97241eea5622)
@@ -289,7 +289,7 @@ Fig 9: Design Browser window for simulation
 
 
 
-Fig 10:Simulation Waveform Window
+## Fig 10:Simulation Waveform Window
 
 
 ![image](https://github.com/user-attachments/assets/0af80d97-74fd-4c7b-a462-c61bf7d39d40)
@@ -297,9 +297,9 @@ Fig 10:Simulation Waveform Window
 
 
 
-Fig 11:Simulation Waveform Window
+## Fig 11:Simulation Waveform Window
 
 
-Result:
+## Result:
 
   The functionality of a 4bit_up-down asynchronous reset Counter was successfully verified using a test bench and simulated with the nclaunch tool.
